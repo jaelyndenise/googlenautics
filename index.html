@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Leviathan - Google Security</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <meta name="author" content="Kala Kinyon & Jaelyn Denise">
+  <meta name="description" content="Enter LSG Test description here.">
+
+  <link href="style.css" rel="stylesheet" type="text/css"/>
+
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&family=Syne+Tactile&display=swap" rel="stylesheet">
+  
+  <link rel="icon" href="leviathan-logo.png" type="image/x-icon"/>
+</head>
+
+<body>
+  <header>
+    <h1 class="header-image">
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+    </h1>
+  </header>
+  <div>
+    <h1>Welcome to Leviathan's Google security test application!</h1>
+    <h2>Leviathan's Google Security test will allow you to certify that the data and practices maintained by your company are in accordance with the guidelines and security policies held by Google Inc. </h2>
+    <h3>Please answer the following to the best of your ability.</h3>
+  </div>
+
+<!--add "required" to all "inputs" in this section-->
+<!--Add an "action" link to the form. Do I even need one?
+Answer: Only if you want to send them to a different page afterward or something :-) -->
+  <form id="form"  method="POST">
+  <p><strong>General (Required)</strong></p>
+    <label for="bname">Business Name:</label><br>
+    <input type="text" id="bname" name="bname"><br>
+    <label for="dba">DBA (If Applicable):</label><br>
+    <input type="text" id="dba" name="dba" ><br>
+    <label for="gpid">Google Project ID:</label><br>
+    <input type="text" id="gpid" name="gpid" ><br>
+    <label for="cname">Contact Name:</label><br>
+    <input type="text" id="cname" name="cname" ><br>
+    <label for="ctitle">Contact Title:</label><br>
+    <input type="text" id="ctitle" name="ctitle" ><br>
+    <label for"bphone">Company Phone:</label><br>
+    <input type="text" id="bphone" name="bphone" ><br>
+    <label for"bemail">Company Email:</label><br>
+    <input type="text" id="bemail" name="bemail" ><br>
+    <label for="bmailaddy">Business Mailing Address:</label><br>
+    <input type="text" id="bmailaddy" name='bmailaddy' ><br>
+    <label for='cwebsite'>Comapny Website URL:</label><br>
+    <input type="text" id='cwebsite' name="cwebsite" ><br>
+    <label for="lclogo">Link to Company Logo: (logo must be a .png and should not exceed 800 pixels x 800 pixels)</label><br>
+    <input type="text" id="lclogo" name="lclogo" ><br>
+  
+<!--add required to "input aname" and "select application type" and "select infrastructure host" inputs-->
+  <p><strong>Application Information (Required)</strong></p>
+      <label for="aname">Application Name:</label><br>
+      <input type="text" id="aname" name="aname"><br>
+      <label for="application-type">Application Type:</label><br>
+      <select name="application-type">
+        <option value="website">Website</option>
+        <option value="website-and-mobile-devices">Website and Mobile Devices</option>
+        <option value="website-and-other-devicse">Website and Other Devices</option>
+      </select><br>
+      <label for="web-and-other-devs">If you answered "Website and other devices" please provide a description in the comments field.</label><br>
+      <input type="text" id="web-and-other-devs" name="web-and-other-devs"><br>
+
+      <label for="infrastructure-host">Infrastructure Host:</label><br>
+      <select name="infrastructure-host" >
+        <option value="userDeviceOnly">User Device Only</option>
+        <option value="dataCenter">Data Center</option>
+        <option value="googleCloud">Google Cloud</option>   
+        <option value>AWS</option>
+        <option value="azure">Azure</option>
+        <option value="otherInfra">Other (please explain in comments)</option> 
+      </select><br>
+      <label for="otherInfra">If you answered "Other Infrastructure Host" please explain here:</label><br>
+      <input type="text" id="otherInfra" name="otherInfra"><br>
+
+
+    <p><strong>Health Care Information</strong></p>
+      <label for="health-care-info">Does the application transmit any data to a health care provider or insurer?</label><br>
+      <select name="health-care-info">
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+      </select><br>
+      <p>If the answer is "yes", the engagement should stop and be reviewed by Google Staff.</p>
+
+    <p><strong>Device Manufacturer</strong></p>
+      <label for="device-man">Are you the manufacturer of a Google Fit device?</label><br>
+      <select name="health-care-info">
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+      </select><br>
+      <p>If the answer is "yes", the engagement should stop and be reviewed by Google Staff.</p>
+
+    <p><strong>Supporting Documentation (Optional)</strong></p>
+      <label for="annualPenTestLink">Link to Annual Penetration Test Report</label><br>
+      <input type="file" id="annualPenTestLink" name="annualPenTestLink"><br>
+      <label for="isoCertLink">Link to your ISO Certification</label><br>
+      <input type="file" id="isoCertLink" name="isoCertLink"><br>
+      <label for="socCertLink">Link to your SOC Certification</label><br>
+      <input type="file" id="socCertLink" name="socCertLink"><br>
+      <label for="sourceAnalysisLink">Link to your latest source code static analysis report</label>
+      <input type="file" id="sourceAnalysisLink" name="sourceAnalysisLink"><br>
+      <label for="infoSecurePolicies">Link to your Information Security Policies</label><br>
+      <input type="file" id="infoSecurePolicies" name="infoSecurePolicies"><br>
+
+    <input type="submit"><br>
+    </form>
+    <p id="log"></p>
+
+<footer></footer>
+<!--Do we need iframe for python? 
+Answer: Nah, we can just use Javascript and call it a day! :-) -->
+  <script src="script.js"></script>
+</body>
+
+</html>
